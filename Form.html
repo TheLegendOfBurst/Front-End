@@ -3,22 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <form >
-        <label for="nome">Nome
-        <input id="nome" type="text" required>
-        </label><br><br>
-        <label for="email">Email
-            <input id="email" type="email" required>
-            </label><br><br>
-            <label >Escolha o valor do seu Salario</label><br>
-            <input type="radio" id="salario" name="salario" value="35.000">R$15.000<br>
-            <input type="radio" id="salario" name="salario" value="35.000">R$25.000<br>
-            <input type="radio" id="salario" name="salario" value="35.000">R$35.000<br>
-            <input type="radio" id="salario" name="salario" value="35.000">R$55.000<br>
-            <button>Enviar</button>
-        </form>
+    <form>
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input id="email" type="email" required><br><br>
+        
+        <fieldset>
+            <legend>Escolha o valor do seu Salário:</legend>
+            <label><input type="radio" name="salario" value="15000"> R$15.000</label><br>
+            <label><input type="radio" name="salario" value="25000"> R$25.000</label><br>
+            <label><input type="radio" name="salario" value="35000"> R$35.000</label><br>
+            <label><input type="radio" name="salario" value="55000"> R$55.000</label><br>
+        </fieldset>
+        
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
