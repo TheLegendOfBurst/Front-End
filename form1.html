@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black; /* Pintando o fundo da página de preto */
+            color: white; /* Mudando a cor do texto para branco */
+            padding: 20px;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="radio"],
+        input[type="checkbox"],
+        select {
+            width: calc(100% - 22px); /* Considerando a largura da borda */
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+        select {
+            appearance: none; /* Remove os estilos padrão do navegador */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.5 14l-5-5 1.5-1.5 3.5 3.5 3.5-3.5 1.5 1.5-5 5z"/></svg>'); /* Ícone da seta para baixo */
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 16px;
+            padding-right: 32px; /* Espaço para o ícone */
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:focus {
+            outline: 2px solid #007bff; /* Borda destacada em foco */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" required placeholder="Digite seu nome">
+        
+        <label for="email">Email:</label>
+        <input id="email" type="email" required placeholder="Digite seu email">
+        
+        <fieldset>
+            <legend>Escolha o valor do seu Salário:</legend>
+            <label><input type="radio" name="salario" value="15000"> R$15.000</label>
+            <label><input type="radio" name="salario" value="25000"> R$25.000</label>
+            <label><input type="radio" name="salario" value="35000"> R$35.000</label>
+            <label><input type="radio" name="salario" value="55000"> R$55.000</label>
+        </fieldset><br>
+        
+        <fieldset>
+            <legend>Selecione seus interesses:</legend>
+            <label><input type="checkbox" name="interesses" value="tecnologia"> Tecnologia</label>
+            <label><input type="checkbox" name="interesses" value="esportes"> Esportes</label>
+            <label><input type="checkbox" name="interesses" value="moda"> Moda</label>
+            <label><input type="checkbox" name="interesses" value="viagens"> Viagens</label>
+        </fieldset><br>
+        
+        <label>Selecione um estado</label>
+        <select>
+            <option value="Brasilia">Brasília</option>
+            <option value="Rio De Janeiro">Rio de Janeiro</option>
+            <option value="Sergipe">Sergipe</option>
+            <option value="São Paulo">São Paulo</option>
+        </select><br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
